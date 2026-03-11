@@ -6,20 +6,25 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Relogio relogio = new Relogio();
+        Relogio meuRelogio = new Relogio();
 
-        // valores válidos
-        relogio.reprogramarHora("14:30");
-        relogio.mostrarHora();
+        // Teste 1: programar hora válida
+        meuRelogio.reprogramarHora("12:30");
+        System.out.println("Hora atual: " + meuRelogio.getHoraAtual()); 
+        // Esperado: "Hora atual: 12:30"
 
-        relogio.definirAlarme("07:00");
+        // Teste 2: tentar burlar com hora inválida
+        meuRelogio.reprogramarHora("99:99");  
+        // Esperado: "Hora inválida! Use o formato HH:MM."
+        System.out.println("Hora atual: " + meuRelogio.getHoraAtual()); 
+        // Esperado: "Hora atual: 12:30"
 
-        // valores inválidos
-        relogio.reprogramarHora("abc");
-        relogio.definirAlarme("99:99");
-
-        relogio.desativarAlarme();
-
+        // Teste 3: tentar burlar com valor nulo
+        meuRelogio.reprogramarHora(null);  
+        // Esperado: "Horário inválido."
+        System.out.println("Hora atual: " + meuRelogio.getHoraAtual()); 
+        // Esperado: "Hora atual: 12:30" 
+   
     }
 
 }

@@ -1,2 +1,7 @@
-cls
-+
+*.class
+.vscode/
+.idea/
+*.iml
+.metadata/
+bin/
+target/
