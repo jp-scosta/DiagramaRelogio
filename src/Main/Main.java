@@ -6,7 +6,7 @@ public class Main {
 
     public static void main(String[] args) {
 
-        Relogio meuRelogio = new Relogio();
+        Relogio meuRelogio = new Relogio("Aço inoxidável", "Digital");
 
         // Teste 1: programar hora válida
         meuRelogio.reprogramarHora("12:30");

@@ -8,6 +8,11 @@ public class Relogio {
     private String horaAtual;
     private String horarioAlarme;
     
+    public Relogio(String material, String modelo) {
+    	this.material = material;
+    	this.modelo = modelo;
+    }
+    
     public void mostrarHora() {
 
         if (horaAtual != null) {
